@@ -23,9 +23,14 @@ li{
 	color: #ff859a;
 }
 
+#rgb{
+	padding-top: 20px;
+	font-size: 50px;
+}
+
 .grid-container{
 	display: grid;
-	grid-template-columns: 160px 160px 160px;
+	grid-template-columns: 140px 140px 140px;
 	grid-gap: 15px;
 	padding-top: 60px;
 	justify-content: center;
@@ -33,7 +38,7 @@ li{
 
 .grid-container div{
 	background-color: white;
-	height: 160px;
+	height: 130px;
 	border-radius: 10px;
 }
 
@@ -48,7 +53,7 @@ li{
 
 #title{
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 40px;
 	color: #fcfcfc;
 }
 
