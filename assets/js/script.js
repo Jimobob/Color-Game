@@ -1,5 +1,6 @@
 var colorArray = [];
 var primaryColor;
+var previousColor;
 
 function randomNum(){
 	return Math.floor(Math.random()*256);
@@ -23,24 +24,32 @@ function removeColorArray(){
 
 function colorDivs(){
 	generateColorArray();
-	console.log(colorArray);
-	primaryColor = colorArray[Math.floor(Math.random()*6)];
+	var num = Math.floor(Math.random()*6);
+	primaryColor = colorArray[num];
 	var divsToColor = document.querySelectorAll(".color");
 	var header = document.querySelector("#header");
+	var checker = document.querySelector("#check")
 	for(var i = 0; i < colorArray.length; i++){
 		divsToColor[i].style.backgroundColor = colorArray[i];
 
-		//console.log(divsToColor[i].style.backgroundColor);
 		divsToColor[i].addEventListener("click", function(){
 			if(this.style.backgroundColor == primaryColor){
 				header.style.backgroundColor = primaryColor;
 
-				var list = document.querySelectorAll("li");
+				var list = document.getElementsByTagName("li");
 				for(var a = 0; a < list.length; a++){
 					list[a].style.color = primaryColor;
 				}
+				
 				removeColorArray();
 				colorDivs();
+
+				checker.innerHTML = "CORRECT!";
+
+			}
+
+			else{
+				checker.innerHTML = "INCORRECT!";
 			}
 		})
 		var rgb = document.querySelector("#rgb");
@@ -49,6 +58,12 @@ function colorDivs(){
 		rgb.style.color = "#fcfcfc";
 	}
 
+}
+
+var change = document.querySelector("#left");
+change.onclick = function(){
+	removeColorArray();
+	colorDivs();
 }
 
 console.log(colorDivs());
