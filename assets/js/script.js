@@ -24,18 +24,18 @@ function removeColorArray(){
 
 function colorDivs(){
 	generateColorArray();
-	var num = Math.floor(Math.random()*6);
-	primaryColor = colorArray[num];
+	primaryColor = colorArray[Math.floor(Math.random()*6)];
 	var divsToColor = document.querySelectorAll(".color");
 	var header = document.querySelector("#header");
 	var checker = document.querySelector("#check")
 	for(var i = 0; i < colorArray.length; i++){
 		divsToColor[i].style.backgroundColor = colorArray[i];
+		console.log(colorArray[i]);
 
 		divsToColor[i].addEventListener("click", function(){
 			if(this.style.backgroundColor == primaryColor){
 				header.style.backgroundColor = primaryColor;
-
+				console.log(primaryColor);
 				var list = document.getElementsByTagName("li");
 				for(var a = 0; a < list.length; a++){
 					list[a].style.color = primaryColor;
@@ -44,12 +44,8 @@ function colorDivs(){
 				removeColorArray();
 				colorDivs();
 
-				checker.innerHTML = "CORRECT!";
-
 			}
-
 			else{
-				checker.innerHTML = "INCORRECT!";
 			}
 		})
 		var rgb = document.querySelector("#rgb");
@@ -66,4 +62,4 @@ change.onclick = function(){
 	colorDivs();
 }
 
-console.log(colorDivs());
+colorDivs();
