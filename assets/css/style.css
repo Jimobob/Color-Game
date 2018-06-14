@@ -13,13 +13,12 @@ ul{
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	text-align: center;
 }
 
 li{
-	float: left;
-	display: block;
-	text-align: center;
-	padding: 8.5px 16px;
+	display: inline-block;
+	padding: 8px 16px;
 	color: #ff859a;
 	cursor: default;
 }
@@ -50,23 +49,26 @@ li{
 	transform: scale(1.05);
 }
 
-#left{
-	margin-left: 23%;
-}
-
 #left:hover{
 	background-color: #efefef;
 }
 
-#right{
-	float: right;
-	padding-right: 23%;
+#easy:hover{
+	background-color: #efefef;
+}
+
+#hard{
+	background-color: #efefef;
+}
+
+#hard:hover{
+	background-color: #efefef;
 }
 
 #check{
-	color: #fcfcfc;
-	font-size: 
-	margin-top: 25px;
+	text-align: center;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 #title{
