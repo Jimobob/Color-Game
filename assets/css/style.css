@@ -4,6 +4,8 @@
 }
 
 body{
+	font-family: 'Tajawal', sans-serif;
+	font-size: 18px;
 	background-color: #2a2a2a;
 	text-align: center;
 }
@@ -18,21 +20,36 @@ ul{
 
 li{
 	display: inline-block;
-	padding: 8px 16px;
+	padding: 10px 16px;
+	padding-bottom: 2px;
 	color: #ff859a;
 	cursor: default;
 }
 
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	background-color: #fcfcfc;
+}
+
+#personal{
+	color: #ff859a;
+}
+
 #rgb{
 	padding-top: 20px;
-	font-size: 50px;
+	font-size: 60px;
 }
 
 .grid-container{
 	display: grid;
 	grid-template-columns: 140px 140px 140px;
 	grid-gap: 15px;
-	padding-top: 50px;
+	padding-top: 60px;
 	justify-content: center;
 }
 

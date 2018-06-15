@@ -78,6 +78,8 @@ function colorDivs(){
 					divsToColor[a].style.backgroundColor = primaryColor;
 				}
 
+				document.querySelector("#personal").style.color = primaryColor;
+
 				left.innerHTML = "PLAY AGAIN?";
 			}
 			else{
